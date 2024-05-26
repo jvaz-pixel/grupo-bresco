@@ -73,7 +73,7 @@ h6 {
 :root {
   --primary-color: #7EAF2D;
   --secondary-color: #144058;
-  --complement-color: #144058;
+  --complement-color: #0d2634;
   --gradient-bg: linear-gradient(0deg, rgba(4, 44, 66, 1) 65%, rgba(20, 64, 88, 1) 100%);
   /* define gradient variable */
   --text-color-p: #232323;
@@ -470,8 +470,8 @@ p {
 
 .zoomBOut {
   /* (A1) DIMENSIONS */
-  width: 600px;
-  height: 360px; 
+  max-width: 350px;
+  max-height: 350px; 
   /* (A2) HIDE SCROLLBARS */
   overflow: hidden;
 }
@@ -581,5 +581,32 @@ p {
   .bg-rounded-icon {
     width: 30px;
     height: 30px;
+  }
+  .swiper-container {
+justify-content: flex-start;
+  }
+  .timeline {
+    flex-direction: column;
+    margin: 35px 0;
+  }
+  .swiper-slide {
+    width: 2px;
+    text-align: center;
+    background: rgb(126, 175, 45);
+    height: auto;  
+  }
+  .timestamp {
+    width: max-content;
+    margin-bottom: 0px;
+    top: -30px;
+  }
+
+  .date {
+    width: max-content;
+    display: block;
+  }
+
+  .status {
+    padding: 0 5px;
   }
 }
