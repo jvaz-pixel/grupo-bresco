@@ -497,7 +497,10 @@
         <div class="col-lg-3">
           <img src="" alt="">
         </div>
-        <div class="col-lg-9">
+        <div class="et_pb_text_inner" id="acabo" style="display: none">
+          <h3><span style="color: #808080;"><br><br><br><center>Gracias por su mensaje, nos pondremos en contacto a la brevedad.</center></span></h3></div>
+          </div>
+        <div class="col-lg-9"  id="deje">
           <p>Ponte en contacto con nosotros</p>
           <div class="login-box">
             <form>
@@ -527,6 +530,8 @@
                   </div>
                 </div>
               </div>
+              
+
               <center>
                 <a class="btn btn-lg cta-proyectos" type="button">Enviar</a>
               </center>
@@ -593,6 +598,29 @@
     });
 
   </script>
+  <script type='text/javascript'>
+    $("#formulario").submit(function(e) {
+       e.preventDefault();
+      //console.log("si entra");
+      var aQuien="contacto@fai.com.mx";
+      var url= "https://api.elasticemail.com/v2/email/send/?apikey=331655DFF2F242B712884088E96271A0F16C7D273E928E1EC1B35A09C4F45310437992FD4DD23070E04425621FED293F&subject=Contacto desde formulario web&from=jorgefai@gmail.com&to=" + aQuien + "&bodyHtml=Se ha recibido un nuevo correo de contacto de la página web<br>Nombre: " + $("#et_pb_contact_name_0").val() + "<br> Con el número de telefono: " + $("#et_pb_contact_field_4_0").val() + "<br> Correo de contacto:" + $("#et_pb_contact_email_0").val() + "<br> y el mensaje: " + $("#et_pb_contact_message_0").val() + "<br><br>&isTransactional=false&fromName=Formulario de contacto web";
+//console.log(url);
+      var settings = {
+        "url": url,
+        "method": "POST",
+        "timeout": 0,
+      };
+
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+        $("#deje").hide();
+        $('#acabo').show();
+      });
+    console.log("acabo");
+
+    });
+
+    </script>
 </body>
 
 </html>
