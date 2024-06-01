@@ -92,9 +92,9 @@ h6 {
 }
 
 .gradient-circle-blue {
-  background: rgb(4,44,66,1);
+  background: rgb(4, 44, 66, 1);
   background-image: url(../images/vector-construction.svg);
-  background-image: url(../images/vector-construction.svg), linear-gradient(180deg, rgba(28,87,119,1) 0%, rgba(4,44,66,1) 60%); 
+  background-image: url(../images/vector-construction.svg), linear-gradient(180deg, rgba(28, 87, 119, 1) 0%, rgba(4, 44, 66, 1) 60%);
   background-position: top right;
   background-repeat: no-repeat;
   background-size: auto;
@@ -102,8 +102,13 @@ h6 {
 }
 
 .gradient-light {
-  background: rgb(220,226,230);
-background: linear-gradient(180deg, rgba(220,226,230,1) 10%, rgba(255,255,255,1) 30%);
+  background: rgb(220, 226, 230);
+  background: linear-gradient(180deg, rgba(220, 226, 230, 1) 10%, rgba(255, 255, 255, 1) 30%);
+}
+
+.gradient-blue {
+  background: rgb(4, 44, 66, 1);
+  background-image: linear-gradient(180deg, rgba(28, 87, 119, 1) 0%, rgba(4, 44, 66, 1) 60%);
 }
 
 h1 {
@@ -136,9 +141,10 @@ p {
   font-size: 32px;
   font-style: normal;
   font-weight: 900;
-  text-transform: none;
+  text-transform: uppercase;
   letter-spacing: 0;
 }
+
 .content-styles h3 {
   color: #fff;
   font-size: 32px;
@@ -155,6 +161,7 @@ p {
   line-height: 1;
   width: 250px;
 }
+
 .text-exp {
   color: #60727C;
   font-size: 36px;
@@ -164,6 +171,7 @@ p {
   text-transform: uppercase;
   padding-top: 24px;
 }
+
 .hl-text {
   display: block;
 }
@@ -174,18 +182,21 @@ p {
   font-weight: 900;
   line-height: 1;
 }
+
 .hl-text p {
   color: var(--text-color-hl);
   font-size: 18px;
   font-weight: bold;
 }
-.hl-text-w{
+
+.hl-text-w {
   color: white;
   font-size: 32px;
   font-weight: 900;
   text-transform: uppercase;
   line-height: 1;
 }
+
 .text-white {
   color: white;
   font-size: 15px;
@@ -193,17 +204,36 @@ p {
   font-weight: 400;
   line-height: 1.7em;
 }
+
 .title-white {
   color: white;
   font-size: 18px;
   font-weight: bold;
 }
+
 .title-white-contact {
   color: white;
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.2;
+}
+
+.h1-title-int {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 0.7;
+}
+
+.hl-text-w-int {
+  color: white;
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
 }
 
 .img-exp-block {
@@ -223,12 +253,12 @@ p {
 }
 
 .box-list {
-  background: rgb(12,38,53);
-background: linear-gradient(121deg, rgba(12,38,53,1) 0%, rgba(35,111,155,1) 100%);
-padding: 16px;
-width: 100%;
-height: auto;
-border-radius: 4px;
+  background: rgb(12, 38, 53);
+  background: linear-gradient(121deg, rgba(12, 38, 53, 1) 0%, rgba(35, 111, 155, 1) 100%);
+  padding: 16px;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 
 ul.check-list {
@@ -245,24 +275,34 @@ ul.check-list {
   padding: 24px 16px 24px;
   border-radius: 4px;
 }
+
 .box-green p {
   color: #0D1D25;
   padding-left: 120px;
   margin-bottom: 0;
 }
+
 .padd-left {
   padding-left: 140px;
- }
+}
+
+.sub-text-blue {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 20px;
+}
 
 /* navBar */
 .navbar-toggler {
   border: 0;
 }
+
 .btn-close-mob {
   margin: calc(-.5 * var(--bs-offcanvas-padding-y)) calc(-.5 * var(--bs-offcanvas-padding-x)) calc(-.5 * var(--bs-offcanvas-padding-y)) auto;
   background: transparent;
   border: 0;
 }
+
 .navbar-nav a.nav-link {
   color: #60727C;
   font-size: 12px;
@@ -270,6 +310,7 @@ ul.check-list {
   font-weight: 800;
   border-bottom: 2px solid transparent;
 }
+
 .navbar-nav a.nav-link:hover {
   color: #7EAF2D;
   border-bottom: 2px solid #7EAF2D;
@@ -278,6 +319,10 @@ ul.check-list {
 .navbar-nav a.nav-link.active {
   color: #7EAF2D;
   border-bottom: 2px solid #7EAF2D;
+}
+.navbar-nav a.nav-link-mob.active {
+  color: #7EAF2D;
+  border-left: 2px solid #7EAF2D;
 }
 
 /*Hero Banner*/
@@ -655,7 +700,7 @@ ul.check-list {
 .zoomBOut {
   /* (A1) DIMENSIONS */
   max-width: 310px;
-  max-height: 310px; 
+  max-height: 310px;
   /* (A2) HIDE SCROLLBARS */
   overflow: hidden;
 }
@@ -664,13 +709,59 @@ ul.check-list {
 .zoomBIn {
   /* (B1) FIT OUTER WRAPPER */
   width: 100%;
-  height: 100%; 
+  height: 100%;
   /* (B3) ANIMATE ZOOM */
   transition: transform ease 0.3s;
 }
- 
+
+.grid-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.box-service {
+  max-width: 369px;
+  margin: 24px;
+}
+
+.box-service h3 {
+  color: var(--complement-color);
+  font-weight: 800;
+  font-size: 18px;
+  margin: 16px 0 8px; 
+}
+
+.box-service p {
+  color: #60727C;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.box-service .divisor-hrz {
+  height: 1px;
+  width: 44px;
+  background-color: #B6C4CB;
+  display: block;
+}
+
+.box-service .zoomBOut {
+  max-width: 369px;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.box-service .zoomBIn {
+  width: 100%;
+  height: 100%;
+  transition: transform ease 0.3s;
+}
+
 /* (C) ZOOM ON HOVER */
-.zoomBIn:hover { transform: scale(1.2); }
+.zoomBIn:hover {
+  transform: scale(1.2);
+}
 
 .element-item .symbol {
   position: absolute;
@@ -749,20 +840,24 @@ ul.check-list {
   background: #D7E6BE47;
   border-radius: 50px;
 }
+
 .splide__slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 4px;
 }
+
 .splide__arrow svg {
   fill: #7EAF2D;
   height: 1.5em;
   width: 1.5em;
 }
+
 .splide__arrow:hover:not(:disabled) svg {
   fill: #2C3D10;
 }
+
 .splide__slide {
   opacity: 0.6;
 }
@@ -770,13 +865,15 @@ ul.check-list {
 .splide__slide.is-active {
   opacity: 1;
 }
-.splide__track--nav > .splide__list > .splide__slide.is-active {
+
+.splide__track--nav>.splide__list>.splide__slide.is-active {
   border: 3px solid #D7E6BE;
   opacity: 1;
   border-radius: 6px;
   transition: all ease .2s;
 }
-.splide__track--nav > .splide__list > .splide__slide {
+
+.splide__track--nav>.splide__list>.splide__slide {
   border: 3px solid transparent;
   cursor: pointer;
   opacity: 0.5;
@@ -800,18 +897,25 @@ ul.check-list {
   padding-bottom: 30px;
 }
 
+.content-top-title {
+  padding-top: 10%;
+}
+
 @media (max-width: 575.98px) {
   .bg-body-tertiary {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
   }
+
   .offcanvas.offcanvas-end {
     width: 90%;
     border: 0;
   }
+
   .navbar-nav .nav-item {
     margin: 5px 0;
   }
+
   .navbar-nav a.nav-link-mob {
     color: #60727C;
     font-size: 15px;
@@ -822,10 +926,12 @@ ul.check-list {
     display: block;
     padding: 12px;
   }
+
   .box-banner-content div {
     top: 0%;
     transform: translate(-50%, 25%);
   }
+
   .hero-bann {
     background: url(../images/banner-home-mobile.jpg) no-repeat top center;
     min-height: 575px;
@@ -835,9 +941,11 @@ ul.check-list {
     font-size: 32px;
     line-height: normal;
   }
+
   .img-exp-block {
     height: 360px;
   }
+
   .info-col b {
     font-size: 20px;
   }
@@ -846,39 +954,48 @@ ul.check-list {
     width: 40px;
     height: 40px;
   }
+
   .swiper-container {
-justify-content: flex-start;
+    justify-content: flex-start;
   }
+
   .timeline {
     flex-direction: column;
     margin: 35px 0;
   }
+
   .swiper-slide {
     width: 2px;
     text-align: center;
     background: rgb(126, 175, 45);
-    height: auto;  
+    height: auto;
   }
+
   .timestamp {
     width: max-content;
     margin-bottom: 0px;
     top: -30px;
   }
+
   .date {
     width: max-content;
     display: block;
   }
+
   .status {
     padding: 0 5px;
   }
+
   .padd-exp {
     padding: 0 2.5rem;
   }
+
   .hl-text {
     display: flex;
     align-items: baseline;
     margin-bottom: 8px;
   }
+
   .hl-text span {
     font-size: 40px;
     font-weight: 900;
@@ -887,25 +1004,37 @@ justify-content: flex-start;
     text-align: right;
     width: 32%;
   }
+
   .hl-text p {
     font-size: 18px;
     line-height: 1.1;
     font-weight: 800;
   }
+
   .button-iso {
     width: 100%;
-  margin: 12px auto;
+    margin: 12px auto;
   }
+
   .grid {
     margin-top: 24px;
   }
+
   .login-box {
     padding: 20px 0 40px 0;
   }
+
   .padd-left {
     padding-left: 0px;
-   }
-   .box-green p {
+  }
+
+  .box-green p {
     padding-left: 0;
-   }
+  }
+  .content-top-title {
+    padding-top: 0%;
+  }
+  .sub-text-blue {
+    font-size: 16px;
+  }
 }
