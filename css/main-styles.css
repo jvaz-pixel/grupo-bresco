@@ -228,6 +228,28 @@ p {
   line-height: 1.2;
 }
 
+.title-white-contact-tk {
+  color: white;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+.title-dark-contact {
+  color: var(--secondary-color);
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.title-dark-contact-tk {
+  color: var(--secondary-color);
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
 .h1-title-int {
   color: var(--primary-color);
   font-size: 18px;
@@ -1014,6 +1036,14 @@ ul.check-list {
   padding-top: 120px;
 }
 
+.contact-left {
+  width: 70%;
+}
+
+.contact-right {
+  width: 30%;
+}
+
 .contact-right p{
   color: #fff;
   font-size: 24px;
@@ -1198,5 +1228,13 @@ ul.check-list {
 
   .sub-text-blue {
     font-size: 16px;
+  }
+
+  .contact-left {
+    width: 100%;
+  }
+  
+  .contact-right {
+    width: 100%;
   }
 }
